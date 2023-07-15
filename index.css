@@ -1,0 +1,288 @@
+body{
+    font-family: "Open Sans", sans-serif;
+    background-color: rgb(233, 223, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 0 0 64px 0;
+    position: relative;
+}
+
+h1 {
+    color: rgb(83, 49, 156);
+    margin: 32px 0 64px 0;
+}
+
+.links {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 16px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links p {
+    margin:16px;
+    padding: 8px;
+    text-decoration: none;
+    opacity: 0.5;
+    color:rgb(83, 49, 156);
+    font-weight: bold;
+}
+.links p:hover{
+    opacity: 1;
+    cursor:pointer;
+}
+
+.links .active{
+    opacity: 1;
+}
+
+.line {
+height: 3px;
+background-color: rgb(231, 231, 231);
+width: 100%;
+margin: 0;
+padding: 0;
+}
+
+.switch{
+    display: flex;
+    margin-top: 25px;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.switch img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.switch .switchbar{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.75rem;
+    display: flex;
+    background-color:rgb(83, 49, 156) ;
+    width: 120px;
+    height: 30px;
+    align-items: center;
+    justify-content:space-between;
+    border-radius: 15px;
+    padding: 0 4px;
+    margin: 5px 20px;
+}
+
+.switch .switchbar #mbl{
+    color: white;
+    padding-left: 10px;
+}
+
+.switch .switchbar #web{
+    color: rgb(83, 49, 156);
+    background-color: white;
+    padding: 4px 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.m-sessions{
+    background-color: rgb(250, 247, 255);
+    width: 50%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin: 25px auto;
+}
+
+.m-sessions .text{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.m-sessions .number{
+    font-weight: bold;
+    font-size: 3.5rem;
+    color: rgb(83, 49, 156);
+    padding: 10px 0;
+    margin: 0;
+}
+
+.container .desc{
+    line-height: 32px;
+    margin: 16px 0 32px 0;
+    padding: 0 64px 0 64px;
+}
+
+.container .bar{
+    margin: 0 64px 0 64px;
+    border: 1px solid rgb(210, 210, 210);
+    background-color: rgb(248, 248, 248);
+    width: calc(100% - 128px) ;
+    height: 16px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.bar .progress{
+    margin: 0 64px 0 0;
+    height: 16px;
+    border-radius: 10px;
+    width: calc(31.25%);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(53, 10, 74, 1) 36%, rgba(83, 49, 156, 1) 100%)
+}
+
+.bar .point{
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: rgba(83, 49, 156, 1);
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: -6px;
+    left: calc(31.25% - 12.5px);
+    transition: all 0.1s ease-in;
+}
+
+.bar .point:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.container .bar-numbers{
+    width: calc(100% - 128px);
+    margin: 16px 64px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.container .bar-numbers li{
+color: rgb(166, 166, 166);
+text-transform: uppercase;
+font-weight: 700;
+}
+
+.billing-container{
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 140px) ;
+    margin: 70px 70px 0 70px;
+
+}
+
+.billing-container .card {
+    background-color: rgb(250, 247, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items:flex-start;
+    flex-wrap: wrap;
+    width: 47.5%;
+    padding: 25px 0px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.1s ease-in;
+}
+
+.billing-container .card:hover{
+    transform:translateY(-10px)
+}
+
+.billing-container .card > *{
+    width: 75%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.billing-container .card p{
+    color: rgb(83, 49, 156);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.billing-container .card .money{
+    color: black;
+    font-size: 2.7rem;
+    margin: 0;
+}
+
+.billing-container .card .text{
+    text-transform: none;
+}
+
+.billing-container .card button{
+    background-color: rgb(83, 49, 156);
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 16px;
+    box-shadow: none;
+    border-radius: 10px;
+    width: auto;
+    transition: all 0.1s ease-in;
+    border-style: none;
+}
+
+.billing-container .card button:hover{
+    transform: scale(1.1);
+}
+
+.billing-container .card .headtext{
+    background: linear-gradient( 90deg, rgba(2, 0, 36, 1) 0%, rgba(53, 10, 74, 1) 36%, rgba(83, 49, 156, 1) 100% );
+    width: 100%;
+    position: absolute;
+    top: calc(-1.5rem + -10px);
+    padding: 5px 0;
+    color: white;
+    text-transform: uppercase;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .links {
+        padding: 16px 50px;
+    }
+    .billing-container .card p {
+        font-size: 0.8rem;
+    }
+
+    .billing-container .card button {
+        font-weight: 100;
+        padding: 10px;
+    }
+
+    .container .bar-numbers li {
+        font-size: 0.9rem;
+    }
+    
+    
+  }
+
+  @media screen and (max-width: 600px) {
+    .links p {
+        padding: 0;
+        margin: 0;
+    }    
+    
+  }
